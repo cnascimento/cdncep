@@ -1,0 +1,12 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  cdncepwebapi:
+    image: cdncepwebapi
+    build:
+      context: .
+      dockerfile: src/cdncep-webapi/Dockerfile
+    ports:
+      - 5184:5184
